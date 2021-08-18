@@ -3,7 +3,6 @@ import * as React from 'react'
 import MapGL from 'react-map-gl'
 import { useState } from 'react'
 
-require('dotenv').config()
 function App() {
   const [viewport, setViewport] = useState({
     latitude: 46,
