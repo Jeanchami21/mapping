@@ -3,6 +3,7 @@ import * as React from 'react'
 import MapGL from 'react-map-gl'
 import { useState } from 'react'
 
+require('dotenv').config()
 function App() {
   const [viewport, setViewport] = useState({
     latitude: 46,
@@ -19,7 +20,7 @@ function App() {
       height='100vh'
       mapStyle='mapbox://styles/jeanvaljean21/cksdky38143ga17rzfckdipvh'
       onViewportChange={setViewport}
-      mapboxApiAccessToken='pk.eyJ1IjoiamVhbnZhbGplYW4yMSIsImEiOiJja3NoOXgyZzgxYXh0MnBudXV0M2hpYzN0In0.t65X4xMtLYes1ZgnRLM5PQ'
+      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
     />
   )
 }
