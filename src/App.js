@@ -1,6 +1,7 @@
 import * as React from 'react'
 
-import MapGL from 'react-map-gl'
+import MapGL, { Marker } from 'react-map-gl'
+
 import { useState } from 'react'
 
 require('dotenv').config()
@@ -21,7 +22,16 @@ function App() {
       mapStyle='mapbox://styles/jeanvaljean21/cksdky38143ga17rzfckdipvh'
       onViewportChange={setViewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
-    />
+    >
+      <Marker
+        latitude={37.78}
+        longitude={-122.41}
+        offsetLeft={-20}
+        offsetTop={-10}
+      >
+        <div>You are here</div>
+      </Marker>
+    </MapGL>
   )
 }
 
