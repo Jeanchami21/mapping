@@ -20,7 +20,7 @@ function App() {
       height='100vh'
       mapStyle='mapbox://styles/jeanvaljean21/cksdky38143ga17rzfckdipvh'
       onViewportChange={setViewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
+      mapboxApiAccessToken='pk.eyJ1IjoiamVhbnZhbGplYW4yMSIsImEiOiJja3NoOXgyZzgxYXh0MnBudXV0M2hpYzN0In0.t65X4xMtLYes1ZgnRLM5PQ'
     />
   )
 }
