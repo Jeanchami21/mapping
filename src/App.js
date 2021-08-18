@@ -67,9 +67,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const allPins = await axios.get(
-          'https://mappin-express.herokuapp.com/pins'
-        )
+        const allPins = await axios.get('/pins')
         setPins(allPins.data)
       } catch (err) {
         console.log(err)
