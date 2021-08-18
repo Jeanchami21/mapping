@@ -21,7 +21,10 @@ export default function Register({ setShowRegister }) {
     }
 
     try {
-      await axios.post('/users/register', newUser)
+      await axios.post(
+        'https://mappin-express.herokuapp.com/users/register',
+        newUser
+      )
       setError(false)
       setSuccess(true)
     } catch (err) {
